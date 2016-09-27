@@ -1,0 +1,14 @@
+{
+  "name": "ionic-face-recognition",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "scss/**/*",
+    "www/app/*",
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

@@ -3,6 +3,9 @@ angular
 .controller('ProfileCtrl', ProfileCtrl);
 
 function ProfileCtrl($state, $cordovaCamera, $ionicModal, $scope, Auth) {
+  var storageRef = firebase.storage().ref();
+  var avatarRef = storageRef.child('avatar.jpg');
+
   $scope.addImage = function() {
     document.addEventListener("deviceready", function () {
       var options = {
@@ -21,6 +24,11 @@ function ProfileCtrl($state, $cordovaCamera, $ionicModal, $scope, Auth) {
       $cordovaCamera.getPicture(options).then(function(imageData) {
         var image = document.getElementById('myAvatar');
         image.src = "data:image/jpeg;base64," + imageData;
+        avatarRef.putString(imageData, 'base64')
+          .then(successUpload)
+        function successUpload(snapshot) {
+          console.log(snapshot);
+        }
       }, function(err) {
       // error
     });

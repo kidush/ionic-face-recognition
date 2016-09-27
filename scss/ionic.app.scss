@@ -20,5 +20,12 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
-@import "www/app/auth/_auth"
+@import "www/app/auth/_auth";
+@import "www/app/profile/_profile";
 
+.bar-custom {
+  background-color: #50BAA3;
+  .title {
+    color: $light;
+  }
+}

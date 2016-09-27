@@ -1,0 +1,32 @@
+<ion-view view-title="Profile">
+  <div class="bar bar-header bar-custom">
+    <h1 class="title">Finalizar cadastro</h1>
+  </div>
+  <ion-content class="profile has-header">
+    <div class="row">
+      <div class="avatar">
+        <img id="myAvatar" src="http://www.translationwebshop.com/wp-content/themes/translationwebshop/images/img_placeholder_avatar.jpg">
+      </div>
+    </div>
+    <form ng-submit="updateProfile()">
+      <div class="list padding">
+        <label class="item item-input">
+          <span class="input-label">Nome</span>
+          <input type="text" ng-model="user.displayName">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">E-mail</span>
+          <input type="email" ng-model="user.email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Senha</span>
+          <input type="password" ng-model="user.password">
+        </label>
+      </div>
+      <div class="padding">
+        <button ng-click="addImage()" class="button button-block button-positive">Adicionar Imagem</button>
+        <button class="button button-block button-positive">Atualizar</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-view>

@@ -5,10 +5,12 @@
 // the 2nd parameter is an array of 'requires'
 angular
 .module('ionicFaceRecognition',
-  [ 'ionic',
+  [ 'ngCordova',
+    'ionic',
     'app.routes',
     'auth.controller',
     'auth.service',
+
     'profile.controller'])
 
 .run(function($ionicPlatform) {

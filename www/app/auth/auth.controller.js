@@ -24,18 +24,16 @@
       .catch(errorResponseCallback);
 
       function successSignup(res) {
-        console.log(res);
         Auth.signin($scope.user)
           .then(successSignIn)
           .catch(errorResponseCallback)
 
         function successSignIn(res) {
-          console.log(res);
+          $state.go('profile');
         }
       }
 
       function errorResponseCallback(res) {
-        console.log(res);
         $ionicPopup
           .alert({
             title: 'Ops :(',
